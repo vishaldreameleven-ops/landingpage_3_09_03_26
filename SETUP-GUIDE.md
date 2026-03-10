@@ -11,6 +11,8 @@ Single HTML landing page for Meta (Facebook/Instagram) ads campaigns.
 
 ## Project Structure
 
+
+
 ```
 landingpage2/
   index.html                  ← entire landing page (HTML + CSS + JS)
