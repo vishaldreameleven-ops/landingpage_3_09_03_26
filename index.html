@@ -599,9 +599,9 @@
       try {
         if (navigator.sendBeacon) {
           var blob = new Blob([payload], { type: 'application/json' });
-          navigator.sendBeacon('/functions/capi', blob);
+          navigator.sendBeacon('/capi', blob);
         } else {
-          fetch('/functions/capi', {
+          fetch('/capi', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: payload

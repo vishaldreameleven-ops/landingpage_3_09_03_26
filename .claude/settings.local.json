@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sv -X POST \"https://landingpage-3-09-03-26.pages.dev/functions/capi\" \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"eventName\":\"Subscribe\",\"eventID\":\"test-123\",\"sourceUrl\":\"https://landingpage-3-09-03-26.pages.dev/\",\"userAgent\":\"Mozilla/5.0\"}' 2>&1)"
+    ]
+  }
+}
