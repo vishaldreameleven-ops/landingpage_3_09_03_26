@@ -683,6 +683,7 @@
 
     /* ── UUID for Meta Pixel CAPI deduplication ── */
     function generateEventID() {
+      if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
       return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
         var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
@@ -701,7 +702,11 @@
       if (cookie) return cookie;
       try {
         var fbclid = new URLSearchParams(window.location.search).get('fbclid');
-        if (fbclid) return 'fb.1.' + Date.now() + '.' + fbclid;
+        if (fbclid) {
+          var fbc = 'fb.1.' + Math.round(Date.now() / 1000) + '.' + fbclid;
+          document.cookie = '_fbc=' + fbc + ';path=/;max-age=7776000;SameSite=Lax';
+          return fbc;
+        }
       } catch(e) {}
       return undefined;
     }

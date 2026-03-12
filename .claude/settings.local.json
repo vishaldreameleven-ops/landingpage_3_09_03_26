@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(curl -sv -X POST \"https://landingpage-3-09-03-26.pages.dev/functions/capi\" \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"eventName\":\"Subscribe\",\"eventID\":\"test-123\",\"sourceUrl\":\"https://landingpage-3-09-03-26.pages.dev/\",\"userAgent\":\"Mozilla/5.0\"}' 2>&1)",
-      "Bash(curl -s -X POST \"https://landingpage-3-09-03-26.pages.dev/capi\" \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"eventName\":\"Subscribe\",\"eventID\":\"test-123\",\"sourceUrl\":\"https://landingpage-3-09-03-26.pages.dev/\",\"userAgent\":\"Mozilla/5.0\"}')"
+      "Bash(curl -s -X POST \"https://landingpage-3-09-03-26.pages.dev/capi\" \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"eventName\":\"Subscribe\",\"eventID\":\"test-123\",\"sourceUrl\":\"https://landingpage-3-09-03-26.pages.dev/\",\"userAgent\":\"Mozilla/5.0\"}')",
+      "Bash(curl -s \"https://landingpage-3-09-03-26.pages.dev/\" | grep -o \"fbq\\\\|fbevents\\\\|944558494668064\" | sort | uniq -c)",
+      "Bash(curl -s -X POST \"https://landingpage-3-09-03-26.pages.dev/capi\" \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"eventName\":\"Subscribe\",\"eventID\":\"test-456\",\"sourceUrl\":\"https://landingpage-3-09-03-26.pages.dev/\",\"userAgent\":\"Mozilla/5.0\"}')"
     ]
   }
 }

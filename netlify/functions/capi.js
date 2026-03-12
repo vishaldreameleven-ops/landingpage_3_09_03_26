@@ -79,7 +79,7 @@ exports.handler = async function (event) {
   };
 
   // Send to Meta Graph API
-  const apiUrl = `https://graph.facebook.com/v20.0/${PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`;
+  const apiUrl = `https://graph.facebook.com/v22.0/${PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`;
 
   try {
     const response = await fetch(apiUrl, {
